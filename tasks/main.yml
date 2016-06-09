@@ -1,2 +1,12 @@
 ---
 # tasks file for ansible-tensorflow
+
+    #Bazel
+    - apt_repository: repo='deb http://storage.googleapis.com/bazel-apt stable jdk1.8' state=present
+    - apt_key: url=https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg state=present
+    - apt: update_cache=yes
+    - apt: name=bazel state=installed
+    
+    - name: "Install tensorflow"
+      become: yes
+      pip: name=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl state=present
