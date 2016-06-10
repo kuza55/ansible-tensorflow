@@ -16,6 +16,7 @@ None
 Dependencies
 ------------
 
+jpnewman.java Installs java 8, for Bazel
 kuza55.cudnn Installs CUDA & cuDNN
 
 Example Playbook
@@ -25,8 +26,9 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: kuza55.cudnn }
-         - { role: kuza55.ansible-tensorflow }
+       - role: jpnewman.java
+       - role: kuza55.cudnn
+       - role: kuza55.ansible-tensorflow
 
 License
 -------
