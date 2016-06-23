@@ -6,6 +6,9 @@
     - apt_key: url=https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg state=present
     - apt: update_cache=yes
     - apt: name=bazel state=installed
+
+    - name: Install pip
+      apt: name=python-pip state=installed
     
     - name: "Install tensorflow"
       become: yes
