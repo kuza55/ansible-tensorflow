@@ -15,6 +15,7 @@ None
 
 Dependencies
 ------------
+This role depends on these two roles, but they're automatically installed if you install this from galaxy:
 
 jpnewman.java Installs java 8, for Bazel
 kuza55.cudnn Installs CUDA & cuDNN
@@ -26,9 +27,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-       - role: jpnewman.java
-       - role: kuza55.cudnn
-       - role: kuza55.ansible-tensorflow
+       - role: kuza55.tensorflow
 
 License
 -------
